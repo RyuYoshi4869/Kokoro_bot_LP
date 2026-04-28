@@ -6,7 +6,7 @@
   <title>こころBot - 誰にも言えないことを、そのまま話していい場所</title>
   <meta
     name="description"
-    content="今、ちょっとしんどいなって思いませんか？こころBotは、誰にも言えないことをそのまま話していい場所です。"
+    content="今、ちょっとしんどいなっていませんか？こころBotは、誰にも言えないことをそのまま話していい場所です。"
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,19 +15,33 @@
     rel="stylesheet"
   />
 
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '852120511248305');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
   <style>
     :root {
       --bg: #f7f5f3;
       --card-bg: #ffffff;
       --text-primary: #2d2d2d;
-      --text-secondary: #888888;
-      --text-muted: #aaaaaa;
-      --logo-bg: #f8c8d4;
+      --text-secondary: #8f8f8f;
+      --text-muted: #b0b0b0;
       --cta-green: #6cc655;
       --cta-green-hover: #5ab847;
-      --cta-shadow: rgba(108, 198, 85, 0.3);
-      --card-shadow: 0 2px 40px rgba(0, 0, 0, 0.06);
-      --card-radius: 24px;
+      --cta-shadow: rgba(108, 198, 85, 0.28);
+      --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+      --card-radius: 28px;
     }
 
     * {
@@ -50,226 +64,226 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 16px;
+      padding: 28px 16px;
     }
 
     .lp-card {
+      width: 100%;
+      max-width: 700px;
       background: var(--card-bg);
       border-radius: var(--card-radius);
       box-shadow: var(--card-shadow);
-      width: 100%;
-      max-width: 440px;
-      padding: 48px 32px 40px;
       text-align: center;
-      animation: cardIn 0.6s ease-out both;
-    }
-
-    @keyframes cardIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      padding: 56px 28px 44px;
     }
 
     .logo-wrap {
-      margin: 0 auto 16px;
-      width: 120px;
-      height: 120px;
-      animation: fadeIn 0.8s ease-out 0.2s both;
+      width: 132px;
+      height: 132px;
+      margin: 0 auto 18px;
     }
 
     .logo-img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      border-radius: 16px;
+      object-fit: cover;
+      border-radius: 24px;
       display: block;
     }
 
     .brand-name {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 400;
       color: var(--text-secondary);
-      letter-spacing: 0.04em;
-      margin-bottom: 36px;
-      animation: fadeIn 0.8s ease-out 0.3s both;
+      letter-spacing: 0.03em;
+      margin-bottom: 42px;
     }
 
     .headline {
-      font-size: 1.35rem;
+      font-size: 2.1rem;
       font-weight: 500;
-      line-height: 1.75;
-      margin-bottom: 16px;
-      animation: fadeIn 0.8s ease-out 0.4s both;
+      line-height: 1.55;
+      letter-spacing: 0.01em;
+      margin-bottom: 26px;
+      color: var(--text-primary);
     }
 
     .sub-copy {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 400;
-      line-height: 1.75;
+      line-height: 1.9;
       color: var(--text-primary);
-      margin-bottom: 36px;
-      animation: fadeIn 0.8s ease-out 0.5s both;
+      margin-bottom: 42px;
     }
 
     .cta-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 12px;
       width: 100%;
-      max-width: 300px;
-      padding: 16px 32px;
+      max-width: 580px;
+      min-height: 72px;
+      padding: 18px 32px;
       background: var(--cta-green);
-      color: #fff;
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
+      color: #ffffff;
       text-decoration: none;
-      box-shadow: 0 4px 16px var(--cta-shadow);
+      border-radius: 999px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      box-shadow: 0 10px 24px var(--cta-shadow);
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-      animation: fadeIn 0.8s ease-out 0.6s both;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-btn::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
-      border-radius: inherit;
-      pointer-events: none;
     }
 
     .cta-btn:hover {
       background: var(--cta-green-hover);
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px var(--cta-shadow);
+      box-shadow: 0 14px 28px var(--cta-shadow);
     }
 
     .cta-btn:active {
       transform: translateY(0);
-      box-shadow: 0 2px 8px var(--cta-shadow);
     }
 
-    .cta-btn svg {
+    .cta-icon {
+      width: 26px;
+      height: 26px;
       flex-shrink: 0;
     }
 
     .footer-note {
-      margin-top: 20px;
-      font-size: 0.8rem;
-      line-height: 1.7;
+      margin-top: 28px;
+      font-size: 0.92rem;
+      line-height: 1.8;
       color: var(--text-muted);
-      animation: fadeIn 0.8s ease-out 0.7s both;
     }
 
     .trust-badges {
+      margin-top: 34px;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      margin-top: 28px;
-      animation: fadeIn 0.8s ease-out 0.8s both;
+      align-items: center;
+      gap: 28px;
       flex-wrap: wrap;
     }
 
     .badge {
       display: flex;
       align-items: center;
-      gap: 5px;
-      font-size: 0.75rem;
-      color: var(--text-muted);
+      gap: 8px;
+      font-size: 0.9rem;
+      color: #c2c2c2;
+      white-space: nowrap;
     }
 
     .badge-icon {
-      width: 16px;
-      height: 16px;
-      opacity: 0.5;
+      width: 18px;
+      height: 18px;
+      opacity: 0.65;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (min-width: 768px) {
+    @media (max-width: 767px) {
       body {
-        padding: 40px;
+        padding: 20px 14px;
       }
 
       .lp-card {
-        max-width: 520px;
-        padding: 64px 56px 52px;
-        border-radius: 32px;
+        max-width: 440px;
+        padding: 46px 24px 38px;
+        border-radius: 24px;
       }
 
       .logo-wrap {
-        width: 140px;
-        height: 140px;
-        margin-bottom: 20px;
+        width: 118px;
+        height: 118px;
+        margin-bottom: 16px;
+      }
+
+      .logo-img {
+        border-radius: 20px;
       }
 
       .brand-name {
-        font-size: 1.35rem;
-        margin-bottom: 44px;
+        font-size: 1rem;
+        margin-bottom: 34px;
       }
 
       .headline {
-        font-size: 1.55rem;
+        font-size: 1.35rem;
+        line-height: 1.7;
+        margin-bottom: 18px;
       }
 
       .sub-copy {
-        font-size: 1.1rem;
-        margin-bottom: 44px;
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 34px;
       }
 
       .cta-btn {
-        font-size: 1.15rem;
-        padding: 18px 40px;
+        max-width: 100%;
+        min-height: 60px;
+        font-size: 1rem;
+        padding: 16px 24px;
+      }
+
+      .cta-icon {
+        width: 22px;
+        height: 22px;
+      }
+
+      .footer-note {
+        font-size: 0.8rem;
+        margin-top: 22px;
+      }
+
+      .trust-badges {
+        margin-top: 28px;
+        gap: 18px;
+      }
+
+      .badge {
+        font-size: 0.78rem;
+        gap: 6px;
+      }
+
+      .badge-icon {
+        width: 16px;
+        height: 16px;
       }
     }
 
     @media (max-width: 374px) {
       .lp-card {
-        padding: 36px 20px 32px;
-      }
-
-      .logo-wrap {
-        width: 100px;
-        height: 100px;
+        padding: 38px 18px 32px;
       }
 
       .headline {
-        font-size: 1.15rem;
+        font-size: 1.18rem;
       }
 
       .sub-copy {
-        font-size: 0.9rem;
+        font-size: 0.92rem;
       }
 
       .cta-btn {
-        font-size: 1rem;
-        padding: 14px 24px;
+        font-size: 0.95rem;
+        min-height: 56px;
       }
     }
   </style>
 </head>
 <body>
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=852120511248305&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+
   <main class="lp-card">
     <div class="logo-wrap">
       <img src="logo.png" alt="こころBot" class="logo-img" />
@@ -293,17 +307,22 @@
       role="button"
       target="_blank"
       rel="noopener noreferrer"
+      onclick="fbq('track', 'Lead');"
     >
+      <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 3C6.477 3 2 6.94 2 11.8c0 2.77 1.49 5.24 3.82 6.86L5 22l3.86-2.12c.99.27 2.04.42 3.14.42 5.523 0 10-3.94 10-8.8S17.523 3 12 3z"></path>
+      </svg>
       無料で話してみる
     </a>
 
     <p class="footer-note">
-      匿名で使えて、すぐに始められます
+      Webでそのまま始められます<br />
+      すぐに利用できます
     </p>
 
     <div class="trust-badges">
       <span class="badge">
-        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
           <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
         </svg>
@@ -311,14 +330,14 @@
       </span>
 
       <span class="badge">
-        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
         </svg>
         安心・安全
       </span>
 
       <span class="badge">
-        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"></circle>
           <path d="M8 12l2 2 4-4"></path>
         </svg>
