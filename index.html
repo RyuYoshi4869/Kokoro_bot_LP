@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>こころBot - 誰にも言えないことを、そのまま話していい場所</title>
+  <title>こころBot - 子育て中のお母さんが、気持ちをそのまま話せる場所</title>
   <meta
     name="description"
-    content="今、ちょっとしんどいなっていませんか？こころBotは、誰にも言えないことをそのまま話していい場所です。"
+    content="こころBotは、子育て中のお母さんが不安やしんどさを匿名で話せるカウンセリングチャットボットです。"
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,6 +37,10 @@
       --text-primary: #2d2d2d;
       --text-secondary: #8f8f8f;
       --text-muted: #b0b0b0;
+      --soft-pink: #f6e7ea;
+      --soft-pink-text: #9b6b76;
+      --soft-block: #faf7f5;
+      --soft-line: #ece7e2;
       --cta-green: #6cc655;
       --cta-green-hover: #5ab847;
       --cta-shadow: rgba(108, 198, 85, 0.28);
@@ -69,7 +73,7 @@
 
     .lp-card {
       width: 100%;
-      max-width: 700px;
+      max-width: 720px;
       background: var(--card-bg);
       border-radius: var(--card-radius);
       box-shadow: var(--card-shadow);
@@ -91,12 +95,26 @@
       display: block;
     }
 
+    .audience-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--soft-pink);
+      color: var(--soft-pink-text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 18px;
+    }
+
     .brand-name {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 400;
       color: var(--text-secondary);
       letter-spacing: 0.03em;
-      margin-bottom: 42px;
+      margin-bottom: 24px;
     }
 
     .headline {
@@ -104,7 +122,7 @@
       font-weight: 500;
       line-height: 1.55;
       letter-spacing: 0.01em;
-      margin-bottom: 26px;
+      margin-bottom: 20px;
       color: var(--text-primary);
     }
 
@@ -113,7 +131,34 @@
       font-weight: 400;
       line-height: 1.9;
       color: var(--text-primary);
-      margin-bottom: 42px;
+      margin-bottom: 34px;
+    }
+
+    .story-box {
+      background: var(--soft-block);
+      border: 1px solid var(--soft-line);
+      border-radius: 22px;
+      text-align: left;
+      padding: 24px 22px;
+      margin: 0 auto 34px;
+      max-width: 600px;
+    }
+
+    .story-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--text-primary);
+    }
+
+    .story-text {
+      font-size: 0.98rem;
+      line-height: 1.9;
+      color: #5b5b5b;
+    }
+
+    .story-text + .story-text {
+      margin-top: 10px;
     }
 
     .cta-btn {
@@ -152,7 +197,7 @@
     }
 
     .footer-note {
-      margin-top: 28px;
+      margin-top: 20px;
       font-size: 0.92rem;
       line-height: 1.8;
       color: var(--text-muted);
@@ -163,7 +208,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 28px;
+      gap: 24px;
       flex-wrap: wrap;
     }
 
@@ -172,7 +217,7 @@
       align-items: center;
       gap: 8px;
       font-size: 0.9rem;
-      color: #c2c2c2;
+      color: #b8b8b8;
       white-space: nowrap;
     }
 
@@ -182,6 +227,31 @@
       opacity: 0.65;
     }
 
+    .survey-box {
+      margin: 34px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid var(--soft-line);
+      max-width: 560px;
+    }
+
+    .survey-text {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .survey-link {
+      font-size: 0.94rem;
+      color: var(--soft-pink-text);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .survey-link:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 767px) {
       body {
         padding: 20px 14px;
@@ -189,42 +259,61 @@
 
       .lp-card {
         max-width: 440px;
-        padding: 46px 24px 38px;
+        padding: 42px 22px 34px;
         border-radius: 24px;
       }
 
       .logo-wrap {
-        width: 118px;
-        height: 118px;
-        margin-bottom: 16px;
+        width: 112px;
+        height: 112px;
+        margin-bottom: 14px;
       }
 
       .logo-img {
         border-radius: 20px;
       }
 
+      .audience-label {
+        font-size: 0.78rem;
+        padding: 8px 12px;
+        margin-bottom: 14px;
+      }
+
       .brand-name {
-        font-size: 1rem;
-        margin-bottom: 34px;
+        font-size: 0.98rem;
+        margin-bottom: 20px;
       }
 
       .headline {
-        font-size: 1.35rem;
+        font-size: 1.42rem;
         line-height: 1.7;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
       }
 
       .sub-copy {
-        font-size: 1rem;
+        font-size: 0.98rem;
         line-height: 1.8;
-        margin-bottom: 34px;
+        margin-bottom: 26px;
+      }
+
+      .story-box {
+        padding: 18px 16px;
+        margin-bottom: 28px;
+      }
+
+      .story-title {
+        font-size: 0.95rem;
+      }
+
+      .story-text {
+        font-size: 0.9rem;
       }
 
       .cta-btn {
         max-width: 100%;
         min-height: 60px;
         font-size: 1rem;
-        padding: 16px 24px;
+        padding: 16px 22px;
       }
 
       .cta-icon {
@@ -234,12 +323,12 @@
 
       .footer-note {
         font-size: 0.8rem;
-        margin-top: 22px;
+        margin-top: 18px;
       }
 
       .trust-badges {
-        margin-top: 28px;
-        gap: 18px;
+        margin-top: 26px;
+        gap: 16px;
       }
 
       .badge {
@@ -251,23 +340,37 @@
         width: 16px;
         height: 16px;
       }
+
+      .survey-box {
+        margin-top: 28px;
+        padding-top: 20px;
+      }
+
+      .survey-text {
+        font-size: 0.82rem;
+      }
+
+      .survey-link {
+        font-size: 0.84rem;
+      }
     }
 
     @media (max-width: 374px) {
       .lp-card {
-        padding: 38px 18px 32px;
+        padding: 36px 18px 30px;
       }
 
       .headline {
-        font-size: 1.18rem;
+        font-size: 1.22rem;
       }
 
-      .sub-copy {
-        font-size: 0.92rem;
+      .sub-copy,
+      .story-text {
+        font-size: 0.88rem;
       }
 
       .cta-btn {
-        font-size: 0.95rem;
+        font-size: 0.94rem;
         min-height: 56px;
       }
     }
@@ -289,17 +392,32 @@
       <img src="logo.png" alt="こころBot" class="logo-img" />
     </div>
 
+    <p class="audience-label">子育て中のお母さんのための相談チャット</p>
+
     <p class="brand-name">こころBot</p>
 
     <h1 class="headline">
-      今、ちょっとしんどいなって<br />
-      思っていませんか？
+      育児のこと、ひとりで<br />
+      抱えこんでいませんか？
     </h1>
 
     <p class="sub-copy">
-      ここは、誰にも言えないことを<br />
-      そのまま話していい場所です
+      こころBotは、子育て中のお母さんが<br />
+      不安やしんどさを匿名で話せる場所です
     </p>
+
+    <div class="story-box">
+      <p class="story-title">こんな気持ち、ありませんか？</p>
+      <p class="story-text">
+        子どものことは大切。でも、自分の気持ちは後回しになってしまう。
+      </p>
+      <p class="story-text">
+        誰かに話したいけれど、家族や友達には言いづらい。
+      </p>
+      <p class="story-text">
+        こころBotは、そんなときに少し気持ちを整理するための最初の一歩です。
+      </p>
+    </div>
 
     <a
       href="https://kokoro-bot-mvp2.vercel.app/api/auth/line"
@@ -312,12 +430,11 @@
       <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M12 3C6.477 3 2 6.94 2 11.8c0 2.77 1.49 5.24 3.82 6.86L5 22l3.86-2.12c.99.27 2.04.42 3.14.42 5.523 0 10-3.94 10-8.8S17.523 3 12 3z"></path>
       </svg>
-      無料で話してみる
+      LINEで無料で話してみる
     </a>
 
     <p class="footer-note">
-      LINEでログインして<br />
-      すぐに匿名で使えます
+      LINEでログインして、すぐに匿名で使えます
     </p>
 
     <div class="trust-badges">
@@ -333,7 +450,7 @@
         <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
         </svg>
-        安心・安全
+        育児の悩み相談
       </span>
 
       <span class="badge">
@@ -343,6 +460,20 @@
         </svg>
         無料
       </span>
+    </div>
+
+    <div class="survey-box">
+      <p class="survey-text">
+        よかったら、もっと使いやすくするための簡単なアンケートにご協力ください
+      </p>
+      <a
+        href="https://forms.gle/your-survey-url"
+        class="survey-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        1分でアンケートに答える
+      </a>
     </div>
   </main>
 </body>
